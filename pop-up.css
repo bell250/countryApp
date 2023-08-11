@@ -1,0 +1,385 @@
+:root {
+    --darkColor1: #041C32;
+    --darkColor2: #EEEEEE;
+    --darkColor3: #0a4d682d;
+}
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+#pop-up {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vw;
+    /* border: 2px solid black; */
+    background-color: rgba(0, 0, 0, 0.719);
+    
+    padding-bottom: 60px;
+    display: none;
+}
+#pop-up::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    filter: blur(20px); /* Adjust the blur radius to your preference */
+    z-index: -1; /* Place the pseudo-element below the content */
+  }
+
+#pop-up2 {
+    width: 60%;
+    height: 90%;   
+    margin: auto;
+    margin-top: 230px;
+    height: 65vh;
+    /* border: 2px solid blueviolet; */
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 15px 15px 18px 10px var(--shadows2);
+    overflow-y: auto;
+    
+}
+#closeBtn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
+    /* border: 2px dashed indianred; */
+}
+#countryName{
+    text-align: center;
+    padding: 8px;
+    font-size: 1.4em;
+    font-style: italic;
+}
+
+#mainPopUpInfo {
+    padding: 10px 50px;
+
+}
+
+.figures {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+#flag {
+    height: 150px;
+    width: 250px;
+    /* border: 1px solid brown; */
+    object-fit: cover;
+    box-shadow: 1px 1px 10px var(--shadows2);
+}
+#coatArms {
+    max-height: 150px;
+    width: 250px;
+    object-fit: contain;
+    
+    /* border: 1px solid brown; */
+}
+figcaption {
+    text-align: center;
+    font-size: .9em;
+    font-style: oblique;
+    font-weight: 200;
+}
+.pop-up-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 1px solid slateblue; */
+    margin-top: 30px;
+}
+.pop-up-info div {
+    font-weight: 800;
+    box-shadow: 0px 2px 7px black;
+    border-radius: 10px;
+    background-color: var(--darkColor3);
+    padding: 10px;
+    font-family: cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+
+}
+.popUpInfo {
+    font-style: oblique;
+    font-weight: 500;
+    font-family: monospace;
+
+}
+.latLong {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+.longs {
+    padding-left: 10px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+}
+#countryLong , #countryLat , #capitalLong , #capitalLat{
+    margin-left: 10px;
+    font-weight: 700;
+}
+#symbol {
+    font-weight: normal;
+    font-size: 1.5em;
+    padding: auto 10px;
+
+}
+.mapsDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#maps {
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#maps a {
+    text-decoration: none;
+    color: darkred;
+}
+/* Dark Mode*/
+
+
+.darkMode {
+    background-color: var(--darkColor1);
+    color: var(--darkColor2);
+}
+#darkModeImg {
+    margin-left: 27px;
+    margin-right: -2px;
+
+}
+.navLinks-black {
+    
+    color: var(--darkColor2);
+}
+.navLinks-black:hover {
+    background-color: var(--darkColor2);
+    color: var(--darkColor1);
+}
+/* .darkClick {
+
+} */
+#darkWhite:hover {
+    background-color: var(--darkColor2);
+    color: var(--darkColor1);
+
+
+}
+.continentHead-black {
+    box-shadow: 2px 2px 2px 3px rgba(255, 255, 255, 0.644);
+    background-color: var(--darkColor2);
+    color: var(--darkColor1);
+
+}
+.pop-up2-black {
+    background-color: var(--darkColor1);
+    color: var(--darkColor2);
+}
+.continental-black {
+    background-color: var(--darkColor3);
+}
+
+@media screen and (max-width: 1440px) {
+    * {
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    #pop-up {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100vw;
+        /* border: 2px solid black; */
+        background-color: rgba(0, 0, 0, 0.555);
+        padding-bottom: 60px;
+        display: none;
+    }
+    
+    #pop-up2 {
+        width: 60%;
+        height: 90%;   
+        margin: auto;
+        margin-top: 230px;
+        height: 65vh;
+        /* border: 2px solid blueviolet; */
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 15px 15px 18px 10px var(--shadows2);
+        overflow-y: auto;
+        
+    }
+    #closeBtn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        margin-top: 20px;
+        margin-right: 20px;
+        /* border: 2px dashed indianred; */
+    }
+    #countryName{
+        text-align: center;
+        padding: 8px;
+        font-size: 1.4em;
+        font-style: italic;
+    }
+    
+    #mainPopUpInfo {
+        padding: 10px 50px;
+    
+    }
+    
+    .figures {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex: 1;
+    }
+    #flag {
+        height: 150px;
+        width: 250px;
+        /* border: 1px solid brown; */
+        object-fit: cover;
+        box-shadow: 1px 1px 10px var(--shadows2);
+    }
+    #coatArms {
+        max-height: 150px;
+        width: 250px;
+        object-fit: contain;
+        
+        /* border: 1px solid brown; */
+    }
+    figcaption {
+        text-align: center;
+        font-size: .9em;
+        font-style: oblique;
+        font-weight: 200;
+    }
+    .pop-up-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* border: 1px solid slateblue; */
+        margin-top: 30px;
+    }
+    .pop-up-info div {
+        font-weight: 800;
+        box-shadow: 0px 2px 7px black;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 10px;
+    
+    }
+    .popUpInfo {
+        font-style: oblique;
+        font-weight: 500;
+        font-family: monospace;
+    
+    }
+    .latLong {
+        display: flex;
+        flex-direction: column;
+        font-weight: 700;
+    }
+    .longs {
+        padding-left: 10px;
+        font-weight: normal;
+        display: flex;
+        flex-direction: row;
+    }
+    #countryLong , #countryLat , #capitalLong , #capitalLat{
+        margin-left: 10px;
+        font-weight: 700;
+    }
+    #symbol {
+        font-weight: normal;
+        font-size: 1.5em;
+        padding: auto 10px;
+    
+    }
+    .mapsDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    #maps {
+        font-weight: 700;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    #maps a {
+        text-decoration: none;
+        color: darkred;
+    }
+    /* Dark Mode*/
+    
+    
+    .darkMode {
+        background-color: var(--darkColor1);
+        color: var(--darkColor2);
+    }
+    #darkModeImg {
+        margin-left: 27px;
+        margin-right: -2px;
+    
+    }
+    .navLinks-black {
+        
+        color: var(--darkColor2);
+    }
+    .navLinks-black:hover {
+        background-color: var(--darkColor2);
+        color: var(--darkColor1);
+    }
+    /* .darkClick {
+    
+    } */
+    #darkWhite:hover {
+        background-color: var(--darkColor2);
+        color: var(--darkColor1);
+    
+    
+    }
+    .continentHead-black {
+        box-shadow: 2px 2px 2px 3px rgba(255, 255, 255, 0.644);
+        background-color: var(--darkColor2);
+        color: var(--darkColor1);
+    
+    }
+    .pop-up2-black {
+        background-color: var(--darkColor1);
+        color: var(--darkColor2);
+    }
+    .darkClick {
+        height:  40px;
+    }
+}
+@media screen and (max-width: 900px){
+    .figures {
+        display: flex;
+        flex-direction: column;
+    }
+}

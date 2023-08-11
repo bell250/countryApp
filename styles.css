@@ -1,0 +1,280 @@
+:root {
+    --shadows: rgba(10, 10, 10, 0.692);
+    --shadows2: black;
+    --darkColor3: #0a4d682d
+}
+* {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 16px;
+}
+body {
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.767);
+}
+#mainHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 25px;
+    /* margin-bottom: 70px; */
+    margin: 20px 20px 70px;
+    flex-wrap: wrap;
+}
+.links {
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+    justify-content: flex-start;
+    float: right;
+    flex-wrap: wrap;
+    margin-right: 30px;
+    flex: 1;
+}
+ .navLinks {
+    text-decoration: none;
+    color: black;
+    padding:  8px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    
+ }
+ .navLinks:hover {
+    background-color: #041C32;
+    color: white;
+ }
+
+header h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px ray;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+}
+#mainHead p {
+    padding: 0;
+    font-style: oblique;
+    margin: 0;
+    color: rgb(255, 0, 55);
+
+}
+#searchSection {
+    display: flex;
+    margin-right: 15px;
+    /* border: 1px solid red; */
+}
+#search {
+    display: flex;
+    align-items: center;
+}
+#searchBar {
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(169, 169, 169, 0.514);
+    padding: 2px;
+    height: 28px;
+
+}
+.continental {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    padding: 5px;
+    width: 200px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 5px 4px var(--shadows);
+    background-color: var(--darkColor3);
+}
+
+.flag-container {
+    /* width: 100%; */
+    height: 50%;
+    /* overflow: hidden; */
+    /* border: 1px solid green */
+
+}
+.flags {
+    object-fit: cover;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    box-shadow: 1px 1px 3px 3px var(--shadows);
+}
+.info-container {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    /* border: 2px  dashed rgb(139, 0, 104); */
+}
+.countries {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.title {
+    padding-top: 5px;
+    font-weight: 700;
+    text-align: center;
+    /* border: 1px solid blue; */
+
+}
+.info {
+    font-style: italic;
+    display: block;
+    /* border: 1px dashed green; */
+}
+.continentHead {
+    /* border: 1px solid black; */
+    box-shadow: 2px 2px 2px 3px var(--shadows);
+    border-radius: 10px;
+    padding: 0 20px;
+    background-color: #041C32;
+    color: white;
+    text-transform: uppercase;
+    margin: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1440px) {
+    body {
+        margin-bottom: 40px;
+        background-color: rgba(255, 255, 255, 0.767);
+    }
+    #mainHead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 25px;
+        /* margin-bottom: 70px; */
+        margin: 20px 20px 70px;
+    }
+    .links {
+        display: flex;
+        flex-direction:row;
+        gap: 10px;
+        justify-content: flex-start;
+        float: right;
+        margin-right: 30px;
+    }
+     .navLinks {
+        text-decoration: none;
+        color: black;
+        padding:  8px 10px;
+        border-radius: 5px;
+        font-weight: 700;
+     }
+     .navLinks:hover {
+        background-color: #041C32;
+        color: white;
+     }
+    
+    header h1 {
+        font-size: 2em;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 2px ray;
+        margin-top: 0;
+        margin-bottom: 0;;
+    }
+    #mainHead p {
+        padding: 0;
+        font-style: oblique;
+        margin: 0;
+        color: rgb(255, 0, 55);
+    
+    }
+    #searchSection {
+        display: flex;
+        margin-right: 15px;
+        /* border: 1px solid red; */
+    }
+    #search {
+        display: flex;
+        align-items: center;
+    }
+    #searchBar {
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        background-color: rgba(169, 169, 169, 0.514);
+        padding: 2px;
+        height: 28px;
+    
+    }
+    .continental {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* border: 1px solid black; */
+        padding: 5px;
+        width: 200px;
+        border-radius: 4px;
+        box-shadow: 4px 4px 5px 4px var(--shadows);
+    }
+    
+    .flag-container {
+        /* width: 100%; */
+        height: 50%;
+        /* overflow: hidden; */
+        /* border: 1px solid green */
+    
+    }
+    .flags {
+        object-fit: cover;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid red; */
+        box-shadow: 1px 1px 3px 3px var(--shadows);
+    }
+    .info-container {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        /* border: 2px  dashed rgb(139, 0, 104); */
+    }
+    .countries {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .title {
+        padding-top: 5px;
+        font-weight: 700;
+        text-align: center;
+        /* border: 1px solid blue; */
+    
+    }
+    .info {
+        font-style: italic;
+        display: block;
+        /* border: 1px dashed green; */
+    }
+    .continentHead {
+        /* border: 1px solid black; */
+        box-shadow: 2px 2px 2px 3px var(--shadows);
+        border-radius: 10px;
+        padding: 0 20px;
+        background-color: #041C32;
+        color: white;
+        text-transform: uppercase;
+        margin: 20px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+

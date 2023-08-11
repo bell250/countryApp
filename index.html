@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pop-up.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/country.png">
+    <!-- <link rel="shortcut icon" href="image/globe-svgrepo-com.svg"> -->
+    
+</head>
+<body >
+    <section id="mainHead">
+        <header>
+            <h1 onclick="showPopUp()">List of Countries</h1>
+            <p>The full list of countries in the whole world</p>
+        
+        </header>
+        <section id="searchSection">
+            <div class="links">
+                <a class="navLinks" href="#africa">AFRICA</a>
+                <a class="navLinks" href="#america">AMERICA</a>
+                <a class="navLinks" href="#asia">ASIA</a>
+                <a class="navLinks" href="#europe">EUROPE</a>
+                <a class="navLinks" href="#oceania">OCEANIA</a>
+                
+            </div>
+            <div id="search">
+                <input type="text" id="searchBar" title="search Bar" placeholder="Country's name">
+                <img onclick="searchApi()" id="searchIcon" width="30" height="30" src="https://img.icons8.com/ios-filled/50/google-web-search.png" alt="google-web-search"/>
+            </div>
+            <img onclick="turnDark()" id="darkModeImg" width="32" height="32" src="https://img.icons8.com/sf-black-filled/64/moon-symbol.png" alt="moon-symbol"/>
+            <div onclick="turnDark()" class="navLinks darkClick" id="darkWhite">Dark Mode</div>
+        
+        </section>
+    </section>
+    
+    <section class="mainContent">
+        <div id="continent-africa">
+            <header  class="continentHead" id="title-africa">
+                <h2  >Africa</h2>
+                <img class="dropDown" width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/down-squared--v1.png" alt="down-squared--v1"/>
+            </header>
+        <div class="countries" id="africa"></div>
+        </div>
+        <div id="continent-america">
+            <header class="continentHead">
+                <h2 >America</h2>
+                <img class="dropDown" width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/down-squared--v1.png" alt="down-squared--v1"/>
+            </header>
+            
+            <div class="countries" id="america"></div>
+        </div>
+        <div id="continent-asia">
+            <header class="continentHead">
+                <h2>Asia</h2>
+                <img class="dropDown" width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/down-squared--v1.png" alt="down-squared--v1"/>
+            </header>
+            
+            <div class="countries" id="asia"></div>
+        </div>
+        <div id="continent-europe">
+            <header class="continentHead">
+                <h2 >Europe</h2>
+                <img class="dropDown" width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/down-squared--v1.png" alt="down-squared--v1"/>
+            </header>
+            
+            <div class="countries" id="europe"></div>
+        </div>
+        <div id="continent-oceania">
+            <header class="continentHead">
+                <h2>Oceania</h2>
+                <img class="dropDown" width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/down-squared--v1.png" alt="down-squared--v1"/>
+            </header>
+            <div class="countries" id="oceania"></div>
+        </div>
+
+    </section>
+</body>
+<div id="pop-up" class="popUP">
+    <div id="pop-up2">
+        <div id="mainPopUpInfo">
+                <div><h1 id="countryName">COUNTRY'S NAME</h1></div>
+                <div class="figures">
+                    <figure>
+                        <img id="flag">
+                    <figcaption>National Flag</figcaption>
+                    </figure>
+                    <figure>
+                        <img id="coatArms">
+                        <figcaption>Coat of Arms</figcaption>
+                    </figure>
+                    
+                </div>
+                <div class="pop-up-info">
+                    <div> Political Data
+                        <p class="popUpInfo political">Common name: <span id="commonName"></span></p>
+                        <p class="popUpInfo political">Official name: <span id="officialName"></span></p>
+                        <p class="popUpInfo political">Capital City: <span id="capitalCity"></span></p>
+                        <p class="popUpInfo political">Demonym: <span id="demonyms"></span></p>
+                        <p class="popUpInfo political">Currency: <span id="currency"></span></p>
+                        <p class="popUpInfo political">Independency: <span id="independency"></span></p>
+                        <p class="popUpInfo political">Dialing code: <span id="dialingCode"></span></p>
+                        <p class="popUpInfo political">Driving Side: <span id="drivingSide"></span></p>
+                    </div>
+                    <div >Geographical Data
+                        <p class="popUpInfo geo">Population: <span id="population"></span></p>
+                        <p class="popUpInfo geo">Area: <span id="area"></span></p>
+                        <p class="popUpInfo geo">Continent: <span id="continent"></span></p>
+                        <p class="popUpInfo">Time Zone: <span id="timeZone"></span></p>
+                        <p class="popUpInfo geo latLong">Latitudes:
+                            <span class="longs">Country:
+                                <span id="countryLat"></span>
+                            </span>
+                            <span class="longs">Capital: 
+                                <span id="capitalLat"></span>
+                            </span>
+                        </p>
+                        <p class="popUpInfo geo latLong">Longitudes
+                            <span class="longs">Country:  
+                                <span id="countryLong"></span>
+                            </span>
+                            <span class="longs">Capital:  
+                                <span id="capitalLong"></span>
+                            </span>
+                        </p>
+                        
+                    </div>
+                </div>
+            <div class="mapsDiv">
+                <img width="48" height="48" src="https://img.icons8.com/color/96/google-maps-new.png" alt="google-maps-new"/>
+                <div id="maps"></div>
+                        
+            </div>
+            <img id="closeBtn" onclick="hidePopUp()" width="67" height="67" src="https://img.icons8.com/external-flat-icons-inmotus-design/67/FFFFFF/external-close-text-editor-flat-icons-inmotus-design.png" alt="external-close-text-editor-flat-icons-inmotus-design"/>
+        </div> 
+        
+    </div>
+</div>
+<script src="index.js"></script>
+</html>
